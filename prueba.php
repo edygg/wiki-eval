@@ -1,5 +1,29 @@
 <!DOCTYPE html>
+<?php 
+	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+		$pages = split(",", $_COOKIE['courses']);
 
+		$key = array_search($_GET['id'], $pages);
+		if ($key !== false) {
+			unset($pages[$key]);
+
+			for ($i = 0; $i < count($pages); $i++) {
+				if (!empty($pages[$i])) {
+
+					if ($i < count($pages) - 1) {
+						$new_content .= $pages[$i] . ",";
+					} else {
+						$new_content .= $pages[$i];
+					}
+				}
+			}
+			
+			setcookie("courses", "", time()-30000);
+			setcookie("courses", $new_content, time()+60*5);
+			echo $_COOKIE['courses'] . "<br>";
+		}
+	}
+?>
 <html>
 	<head>
 		<title>Listado de páginas seleccionadas</title>
@@ -8,30 +32,6 @@
 
 	<body>
 		<?php 
-
-			if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-				$pages = split(",", $_COOKIE['courses']);
-
-				$key = array_search($_GET['id'], $pages);
-				if ($key !== false) {
-					unset($pages[$key]);
-
-					for ($i = 0; $i < count($pages); $i++) {
-						if (!empty($pages[$i])) {
-
-							if ($i < count($pages) - 1) {
-								$new_content .= $pages[$i] . ",";
-							} else {
-								$new_content .= $pages[$i];
-							}
-						}
-					}
-					
-					setcookie("courses", "", time()-30000);
-					setcookie("courses", $new_content, time()+60*5);
-					echo $_COOKIE['courses'] . "<br>";
-				}
-			}
 
 			$con = mysqli_connect("localhost", "wikiphp", "Wixi+php2013", "iscwiki");
 			
