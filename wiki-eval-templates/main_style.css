@@ -1,31 +1,45 @@
+/* ----------------- Navigation bars ----------------- */
 #fi_logo {
-	width: 100px;
-	height: 100px;
+	height: 100%;
+	width: auto;
+	vertical-align: middle;
 }
+
 
 .link_bar {
 	width: 100%;
-	background-color: blue;
-
+	background-color: rgb(27,74,171);
 	font-family: sans-serif;
-	font-weight: 500px;
+	text-align: center;
 }
 
 #top_links {
+	height: 10%;
 	position: fixed;
 	top: 0;
+
+	color: white;
+	font-weight: bolder;
 }
 
 #bottom_links {
+	height: 5%;
 	position: fixed;
 	bottom: 0;
 }
 
+#bottom_links > a {
+	color: white;
+}
+
+/* ----------------- END ----------------- */
+
+/* ------------------- Magane options ------------------- */
 .option {
 	width: 170px;
 	height: 140px;
 	margin: 5px 5px;
-	padding: 30px;
+	padding: 15px;
 	text-align: center;
 	font-size: 0.8em;
 }
@@ -33,9 +47,11 @@
 /* Options -webkit-box */
 #manage_options {
 	position: fixed;
-	display: -webkit-box;	display: -moz-box;	display: box;
+	display: -webkit-box;	display: -moz-box;
 	-webkit-box-align: center;	-moz-box-align: center;
 }
+
+/* ----------------- END ----------------- */
 
 h1 {
 	text-align: center;
