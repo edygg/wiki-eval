@@ -1,0 +1,61 @@
+#fi_logo {
+	width: 100px;
+	height: 100px;
+}
+
+.link_bar {
+	width: 100%;
+	background-color: blue;
+
+	font-family: sans-serif;
+	font-weight: 500px;
+}
+
+#top_links {
+	position: fixed;
+	top: 0;
+}
+
+#bottom_links {
+	position: fixed;
+	bottom: 0;
+}
+
+.option {
+	width: 170px;
+	height: 140px;
+	margin: 5px 5px;
+	padding: 30px;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+/* Options -webkit-box */
+#manage_options {
+	position: fixed;
+	display: -webkit-box;	display: -moz-box;	display: box;
+	-webkit-box-align: center;	-moz-box-align: center;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 160px;
+}
+
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+/* Links reset function */
+a {	text-decoration: none; }
+a:link { color:#000000; }      	/* unvisited link */
+a:visited { color:#000000; }  	/* visited link */
+a:hover { color:#000000; }  		/* mouse over link */
+a:active { color:#000000; }  		/* selected link */
