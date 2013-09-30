@@ -23,9 +23,10 @@
 }
 
 #bottom_links {
-	height: 5%;
+	height: 7%;
 	position: fixed;
 	bottom: 0;
+	vertical-align: middle;
 }
 
 #bottom_links > a {
@@ -42,13 +43,17 @@
 	padding: 15px;
 	text-align: center;
 	font-size: 0.8em;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(224,66,54)), to(rgb(255,165,158)));
+	background: linear-gradient(bottom, rgb(224,66,54), rgb(255,165,158));
+	border-radius: 25px;
 }
+
 
 /* Options -webkit-box */
 #manage_options {
-	position: fixed;
+	width: 100%;
 	display: -webkit-box;	display: -moz-box;
-	-webkit-box-align: center;	-moz-box-align: center;
+	text-align: center;
 }
 
 /* ----------------- END ----------------- */
