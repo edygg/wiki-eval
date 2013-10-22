@@ -39,6 +39,7 @@
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			if (val_form()) {
 				$query = "INSERT INTO main_pages (page_id, course_name, course_code) VALUES (" . $_POST['pages'] . ",'" . $_POST['c_name'] . "','" . $_POST['c_code'] . "');";
+				//echo $query;
 				$result = mysqli_query($con, $query);
 				if ($result) {
 					echo '<div class="success">Ingresado exitosamente</div>';

@@ -8,8 +8,8 @@
 	<head>
 	<body>
 	<?php
-		putenv("MW_INSTALL_PATH=/var/www/mediawiki");
-		$include_dir = "../mediawiki/includes";
+		putenv("MW_INSTALL_PATH=/var/www/wiki");
+		$include_dir = "../wiki/includes";
 		require_once( "$include_dir/WebStart.php");
 		require_once( "$include_dir/User.php");
 		$t = new User();

@@ -18,9 +18,9 @@
 				}
 			}
 			
-			setcookie("courses", "", time()-30000);
+			//setcookie("courses", "", time()-30000);
 			setcookie("courses", $new_content, time()+60*5);
-			echo $_COOKIE['courses'] . "<br>";
+			//echo $_COOKIE['courses'] . "<br>";
 		}
 	}
 ?>
@@ -38,7 +38,7 @@
 			if (mysqli_connect_errno($con)) {
 				echo '<div class="error">' . "Falló la conexión : " . mysqli_connect_error() . "</div>";
 			} else {
-				echo '<div class="success">' . "Conexión exitosa" . "</div>";
+				//echo '<div class="success">' . "Conexión exitosa" . "</div>";
 			}
 			echo $_COOKIE['courses'] . "<br>";
 			$pages = split(",", $_COOKIE['courses']);
