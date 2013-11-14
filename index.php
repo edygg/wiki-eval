@@ -8,8 +8,8 @@
 	<head>
 	<body>
 	<?php
-		putenv("MW_INSTALL_PATH=/var/www/wiki");
-		$include_dir = "../wiki/includes";
+		putenv("MW_INSTALL_PATH=/var/www/mediawiki");
+		$include_dir = "../mediawiki/includes";
 		require_once( "$include_dir/WebStart.php");
 		require_once( "$include_dir/User.php");
 		$t = new User();
@@ -47,8 +47,9 @@
 			echo "	<li>Definir periodos</li>";
 			echo '		<ul>
 							<li><a href="IngresoPeriodos.php">Ingresar periodos</a></li>
+							<li><a href="ListarPeriodos.php">Listar periodos</a></li>
 						</ul>';
-			echo '	<li><a href="list1.php">Listar clases</a></li>';
+			echo '	<li><a href="Paginas.php">Listar clases</a></li>';
 			echo "</ul>";
 		}else{
 			$query = "SELECT user_name FROM user JOIN professors ON user.user_id = professors.user_id WHERE professors.user_id = " . $user_id . ";";
